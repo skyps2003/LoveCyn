@@ -22,6 +22,7 @@ const Gallery = () => {
                 grabCursor={true}
                 centeredSlides={true}
                 slidesPerView={'auto'}
+                loop={true}
                 coverflowEffect={{
                     rotate: 40,
                     stretch: 0,
@@ -93,10 +94,10 @@ const Gallery = () => {
                     href="https://photos.app.goo.gl/XZub964o3BNGHwxc8"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-[#911d90] to-[#7e097e] text-white font-bold shadow-lg hover:scale-105 transition-transform"
+                    className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-accent-primary to-accent-secondary text-white font-bold shadow-lg hover:scale-105 hover:shadow-xl transition-all duration-300"
                 >
                     <ExternalLink size={20} />
-                    <span>Ver Álbum Completo</span>
+                    <span className="text-white drop-shadow-sm">Ver Álbum Completo</span>
                 </a>
             </div>
         </section >

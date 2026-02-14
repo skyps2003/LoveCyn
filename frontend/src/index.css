@@ -20,13 +20,14 @@
 }
 
 :root {
-    --color-violet-100: #c85bc4;
-    --color-violet-200: #b646b3;
-    --color-violet-300: #a332a1;
-    --color-violet-400: #911d90;
-    --color-violet-500: #7e097e;
+    --color-bg-primary: #f4f4f8;
+    --color-text-primary: #4a4e69;
+    --color-accent-primary: #c3b9e3;
+    --color-accent-secondary: #eab8e3;
+    --color-card-bg: #ffffff;
+    --color-card-border: #d1c4e9;
 }
 
 body {
-    @apply bg-slate-900 text-white overflow-x-hidden;
+    @apply bg-bg-primary text-text-primary overflow-x-hidden;
 }
