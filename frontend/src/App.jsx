@@ -9,11 +9,41 @@ import confetti from 'canvas-confetti';
 
 function App() {
     const handlePanic = () => {
-        // ... existing code ...
+        const duration = 3000;
+        const animationEnd = Date.now() + duration;
+        const defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+        const randomInRange = (min, max) => Math.random() * (max - min) + min;
+
+        const interval = setInterval(function () {
+            const timeLeft = animationEnd - Date.now();
+
+            if (timeLeft <= 0) {
+                return clearInterval(interval);
+            }
+
+            const particleCount = 50 * (timeLeft / duration);
+
+            // Heart shaped confetti
+            confetti({
+                ...defaults,
+                particleCount,
+                origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+                shapes: ['heart'],
+                colors: ['#c85bc4', '#ffffff', '#a332a1', '#7e097e']
+            });
+            confetti({
+                ...defaults,
+                particleCount,
+                origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+                shapes: ['heart'],
+                colors: ['#c85bc4', '#ffffff', '#a332a1', '#7e097e']
+            });
+        }, 250);
     };
 
     return (
-        <div className="min-h-screen text-white selection:bg-violet-500 selection:text-white relative">
+        <div className="min-h-screen text-white selection:bg-violet-500 selection:text-white relative font-poppins">
             <FallingFlowers />
             <Hero />
 
@@ -41,7 +71,7 @@ function App() {
                     onClick={handlePanic}
                     className="px-8 py-4 bg-gradient-to-r from-violet-600 to-fuchsia-600 rounded-full font-bold text-xl shadow-[0_0_30px_rgba(167,139,250,0.6)] animate-pulse hover:animate-none hover:scale-110 transition-transform"
                 >
-                    🎉 Celebrar Amor 🎉
+                    💖 Celebrar Amor 💖
                 </button>
                 <p className="mt-8 text-violet-400/50 text-sm">Hecho con 💜 para ti</p>
             </footer>

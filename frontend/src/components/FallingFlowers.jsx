@@ -9,28 +9,21 @@ const FallingFlowers = () => {
         let width, height;
         let particles = [];
 
-        // Flower emojis
-        const flowers = ['🌸', '🌹', '🌺', '🌷', '🌻'];
+        // Heart emojis
+        const hearts = ['💜', '🤍', '💖', '💗', '💓'];
 
-        const resize = () => {
-            width = window.innerWidth;
-            height = window.innerHeight;
-            canvas.width = width;
-            canvas.height = height;
-        };
-        window.addEventListener('resize', resize);
-        resize();
+        // ...
 
         class Particle {
             constructor() {
                 this.x = Math.random() * width;
                 this.y = Math.random() * -height; // Start above screen
-                this.size = Math.random() * 15 + 10; // Size 10-25px
+                this.size = Math.random() * 20 + 10; // Size 10-30px
                 this.speedY = Math.random() * 1 + 0.5;
                 this.speedX = Math.random() * 1 - 0.5;
                 this.rotation = Math.random() * 360;
                 this.rotationSpeed = Math.random() * 2 - 1;
-                this.flower = flowers[Math.floor(Math.random() * flowers.length)];
+                this.heart = hearts[Math.floor(Math.random() * hearts.length)];
             }
             update() {
                 this.y += this.speedY;
@@ -47,14 +40,14 @@ const FallingFlowers = () => {
                 ctx.translate(this.x, this.y);
                 ctx.rotate((this.rotation * Math.PI) / 180);
                 ctx.font = `${this.size}px serif`;
-                ctx.fillText(this.flower, 0, 0);
+                ctx.fillText(this.heart, 0, 0);
                 ctx.restore();
             }
         }
 
         const init = () => {
             particles = [];
-            // Create 30 flowers
+            // Create 30 hearts
             for (let i = 0; i < 30; i++) particles.push(new Particle());
         };
 
@@ -63,6 +56,15 @@ const FallingFlowers = () => {
             particles.forEach(p => { p.update(); p.draw(); });
             requestAnimationFrame(animate);
         };
+
+        const resize = () => {
+            width = window.innerWidth;
+            height = window.innerHeight;
+            canvas.width = width;
+            canvas.height = height;
+        };
+        window.addEventListener('resize', resize);
+        resize();
 
         init();
         animate();
