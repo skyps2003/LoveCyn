@@ -17,13 +17,13 @@ function App() {
             <FallingFlowers />
             <Hero />
 
-            <div className="max-w-md mx-auto px-6 mb-12">
-                <div className="glass p-4 rounded-2xl flex items-center gap-4 hover:scale-105 transition-transform">
+            <div className="max-w-3xl mx-auto px-4 mb-20">
+                <div className="bg-[#7e097e]/20 backdrop-blur-xl rounded-[2.5rem] p-8 border border-[#a332a1]/30 shadow-[0_0_60px_rgba(126,9,126,0.15)] hover:scale-[1.02] transition-transform duration-500">
                     <iframe
-                        style={{ borderRadius: '12px' }}
+                        style={{ borderRadius: '20px' }}
                         src="https://open.spotify.com/embed/track/5bi0gh89wRuH2OgjdAKFsb?utm_source=generator&theme=0"
                         width="100%"
-                        height="80"
+                        height="152"
                         frameBorder="0"
                         allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                         loading="lazy">

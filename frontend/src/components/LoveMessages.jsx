@@ -33,7 +33,7 @@ const LoveMessages = () => {
                         viewport={{ once: true }}
                         transition={{ delay: index * 0.1, duration: 0.5 }}
                         whileHover={{ scale: 1.02 }}
-                        className="bg-[#7e097e]/10 backdrop-blur-sm border border-[#b646b3]/30 p-8 rounded-2xl relative group hover:bg-[#911d90]/20 transition-all shadow-lg hover:shadow-[#c85bc4]/20"
+                        className="bg-[#7e097e]/20 backdrop-blur-xl border border-[#a332a1]/30 p-8 rounded-[2rem] relative group hover:bg-[#911d90]/20 transition-all shadow-[0_0_30px_rgba(126,9,126,0.15)] hover:shadow-[#c85bc4]/20 hover:-translate-y-2"
                     >
                         <Heart
                             className="absolute top-4 right-4 text-[#a332a1]/20 group-hover:text-[#c85bc4]/40 transition-colors"

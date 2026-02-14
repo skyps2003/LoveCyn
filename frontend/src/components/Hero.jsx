@@ -70,17 +70,17 @@ const Hero = () => {
                     initial={{ opacity: 0, y: -50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
-                    className="text-6xl md:text-8xl lg:text-9xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#c85bc4] via-white to-[#b646b3] drop-shadow-[0_0_25px_rgba(163,50,161,0.6)]"
+                    className="text-7xl md:text-9xl font-serif font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#c85bc4] via-white to-[#b646b3] drop-shadow-[0_0_25px_rgba(163,50,161,0.6)]"
                 >
-                    Nuestra Historia
+                    Cynthia
                 </motion.h1>
                 <motion.p
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
                     transition={{ delay: 0.5, duration: 1 }}
-                    className="mt-6 text-xl md:text-2xl text-[#c85bc4] tracking-[0.3em] font-light uppercase"
+                    className="mt-6 text-xl md:text-3xl text-[#c85bc4] tracking-[0.3em] font-light uppercase"
                 >
-                    Donde todo comenzó
+                    El Amor de mi Vida
                 </motion.p>
                 <motion.div
                     initial={{ scale: 0 }}

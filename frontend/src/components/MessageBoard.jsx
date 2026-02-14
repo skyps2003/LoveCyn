@@ -8,7 +8,7 @@ const MessageBoard = () => {
     const [input, setInput] = useState('');
     const [loading, setLoading] = useState(false);
 
-    const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api/messages';
+    const API_URL = 'https://lovecyn-backend.onrender.com/api/messages';
 
     const fetchMessages = async () => {
         try {
@@ -71,9 +71,10 @@ const MessageBoard = () => {
                         <button
                             type="submit"
                             disabled={loading || !input.trim()}
-                            className="bg-gradient-to-r from-[#911d90] to-[#7e097e] hover:from-[#a332a1] hover:to-[#911d90] text-white p-3 rounded-full transition-all disabled:opacity-50 disabled:cursor-not-allowed hover:scale-110 active:scale-95 shadow-lg shadow-[#7e097e]/40"
+                            className="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[#911d90] to-[#7e097e] text-white font-bold shadow-lg hover:scale-105 transition-transform disabled:opacity-50 disabled:cursor-not-allowed"
                         >
-                            <Send size={20} />
+                            <span>Enviar</span>
+                            <Send size={18} />
                         </button>
                     </div>
                 </form>

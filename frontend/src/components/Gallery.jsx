@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination, Autoplay } from 'swiper/modules';
 import { motion, AnimatePresence } from 'framer-motion';
-import { X } from 'lucide-react';
+import { X, ExternalLink } from 'lucide-react';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
@@ -93,12 +93,13 @@ const Gallery = () => {
                     href="https://photos.app.goo.gl/XZub964o3BNGHwxc8"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-3 px-10 py-4 rounded-full bg-gradient-to-r from-[#b646b3] to-[#911d90] text-white font-bold text-lg hover:shadow-[0_0_40px_rgba(182,70,179,0.5)] transition-all transform hover:-translate-y-1 hover:scale-105"
+                    className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-[#911d90] to-[#7e097e] text-white font-bold shadow-lg hover:scale-105 transition-transform"
                 >
-                    <span>📸 Ver Álbum Completo</span>
+                    <ExternalLink size={20} />
+                    <span>Ver Álbum Completo</span>
                 </a>
             </div>
-        </section>
+        </section >
     );
 };
 
