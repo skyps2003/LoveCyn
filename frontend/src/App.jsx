@@ -3,7 +3,7 @@ import Hero from './components/Hero';
 import Timeline from './components/Timeline';
 import Gallery from './components/Gallery';
 import MessageBoard from './components/MessageBoard';
-import LoveTree from './components/LoveTree';
+import LoveMessages from './components/LoveMessages';
 import FallingFlowers from './components/FallingFlowers';
 import confetti from 'canvas-confetti';
 
@@ -33,7 +33,7 @@ function App() {
 
             <Timeline />
             <Gallery />
-            <LoveTree />
+            <LoveMessages />
             <MessageBoard />
 
             <footer className="py-12 text-center pb-20">
