@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+    .glass {
+        @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg;
+    }
+
+    .text-gradient {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-white to-violet-200;
+    }
+}
+
+:root {
+    --color-violet-100: #c85bc4;
+    --color-violet-200: #b646b3;
+    --color-violet-300: #a332a1;
+    --color-violet-400: #911d90;
+    --color-violet-500: #7e097e;
+}
+
+body {
+    @apply bg-slate-900 text-white overflow-x-hidden;
+}
